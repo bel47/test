@@ -3,12 +3,9 @@ package com.ticketing.ts.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "users")
-public class User {
+@Table(name = "passengers")
+public class Passenger {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-
-    @Column(name = "uname")
-    private String userName;
 }
