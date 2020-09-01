@@ -6,9 +6,8 @@ import javax.persistence.*;
 @Table(name = "route")
 public class Route {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = Genergit ationType.AUTO)
     private long id;
 
-    @OneToOne(mappedBy = "address")
-    private Address address;
+
 }
