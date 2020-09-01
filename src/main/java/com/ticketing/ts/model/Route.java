@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "route")
 public class Route {
     @Id
-    @GeneratedValue(strategy = Genergit ationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
 

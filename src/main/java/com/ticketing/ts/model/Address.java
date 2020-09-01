@@ -9,7 +9,6 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(unique = true)
+    @OneToOne(mappedBy = "address")
     private Route route;
 }

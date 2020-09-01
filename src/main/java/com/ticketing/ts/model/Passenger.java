@@ -9,6 +9,18 @@ public class Passenger {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @OneToOne(mappedBy = "address")
-    private Route route;
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "gender")
+    private String gender;
+
+    @Column(name = "age")
+    private int age;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(unique = true)
+    private Address address;
+
+
 }
