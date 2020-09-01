@@ -3,11 +3,12 @@ package com.ticketing.ts.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "trips")
-public class Trip {
+@Table(name = "route")
+public class Route {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-
+    @OneToOne(mappedBy = "address")
+    private Address address;
 }
