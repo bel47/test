@@ -10,5 +10,5 @@ public class Address {
     private long id;
 
     @OneToOne(mappedBy = "address")
-    private Route route;
+    private Passenger passenger;
 }
