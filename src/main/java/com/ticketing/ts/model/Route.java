@@ -8,6 +8,4 @@ public class Route {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-
-
 }
