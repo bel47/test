@@ -11,7 +11,6 @@ public class RouteController {
 	@RequestMapping(value = { "/route/save", "/route/add" })
 	public ModelAndView save(@ModelAttribute("route") Route routeObj) {
 		ModelAndView mav = new ModelAndView("routeList");
-
 		return mav;
 	}
 

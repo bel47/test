@@ -12,6 +12,6 @@ public class Payment {
 	@Column(name = "paymentChannel")
 	private String paymentChannel;
 
-	@OneToOne(mappedBy = "payment")
-	private Payment payment;
+	//@OneToOne(mappedBy = "payment")
+	//private Payment payment;
 }
