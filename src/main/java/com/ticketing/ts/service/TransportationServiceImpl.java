@@ -3,12 +3,16 @@ package com.ticketing.ts.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.ticketing.ts.dao.TouchPointDAO;
+import com.ticketing.ts.dao.TransportationDAO;
 import com.ticketing.ts.model.Touchpoint;
+import com.ticketing.ts.model.Transportation;
 
-public class TransportationServiceImpl {
+@Service
+public class TransportationServiceImpl implements TransportationService{
 
 	
 	@Autowired
@@ -16,26 +20,26 @@ public class TransportationServiceImpl {
 
 	@Transactional
 	@Override
-	public List<Touchpoint> get() {
-		return tpDAO.get();
+	public List<Transportation> get() {
+		return trnsportationDAO.get();
 	}
 
 	@Transactional
 	@Override
-	public Touchpoint get(int id) {
-		return tpDAO.get(id);
+	public Transportation get(int id) {
+		return trnsportationDAO.get(id);
 	}
 
 	@Transactional
 	@Override
-	public void save(Touchpoint tp) {
-		tpDAO.save(tp);
+	public void save(Transportation trnsportation) {
+		trnsportationDAO.save(trnsportation);
 	}
 
 	@Transactional
 	@Override
 	public void delete(int id) {
-		tpDAO.delete(id);
+		trnsportationDAO.delete(id);
 	}
 
 }
