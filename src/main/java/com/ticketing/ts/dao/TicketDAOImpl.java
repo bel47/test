@@ -20,7 +20,7 @@ public class TicketDAOImpl implements TicketDAO {
 	@Override
 	public List<Ticket> get() {
 		Session currentSession = entityManager.unwrap(Session.class);
-		Query query = currentSession.createQuery("from Ticket", Trip.class);
+		Query query = currentSession.createQuery("from Ticket", Ticket.class);
 		List<Ticket> list = query.getResultList();
 		return list;
 	}

@@ -5,38 +5,36 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ticketing.ts.dao.TripDAO;
 import com.ticketing.ts.dao.UserDAO;
-import com.ticketing.ts.model.Trip;
 import com.ticketing.ts.model.User;
 
-public class TripServiceImpl implements TripService {
+public class UserServiceImpl implements UserService {
 
 	@Autowired
-	private TripDAO tripDAO;
+	private UserDAO userDAO;
 
 	@Transactional
 	@Override
-	public List<Trip> get() {
-		return tripDAO.get();
+	public List<User> get() {
+		return userDAO.get();
 	}
 
 	@Transactional
 	@Override
-	public Trip get(int id) {
-		return tripDAO.get(id);
+	public User get(int id) {
+		return userDAO.get(id);
 	}
 
 	@Transactional
 	@Override
-	public void save(Trip trip) {
-		tripDAO.save(trip);
+	public void save(User user) {
+		userDAO.save(user);
 	}
 
 	@Transactional
 	@Override
 	public void delete(int id) {
-		tripDAO.delete(id);
+		userDAO.delete(id);
 	}
 
 }
