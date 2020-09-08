@@ -10,7 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.ticketing.ts.model.Passenger;
 import com.ticketing.ts.model.Route;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class RouteDAOImpl implements RouteDAO {
 
 	@Autowired
@@ -19,7 +21,7 @@ public class RouteDAOImpl implements RouteDAO {
 	@Override
 	public List<Route> get() {
 		Session currentSession = entityManager.unwrap(Session.class);
-		Query query = currentSession.createQuery("from Passenger", Route.class);
+		Query query = currentSession.createQuery("from Route", Route.class);
 		List<Route> list = query.getResultList();
 		return list;
 	}
