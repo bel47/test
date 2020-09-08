@@ -28,12 +28,15 @@ public class Transportation {
 	private String numberOfSeat;
 
 	public Transportation(long id, String vehicle, String plate_number, String owner, String numberOfSeat) {
-		super();
 		this.id = id;
 		this.vehicle = vehicle;
 		this.plate_number = plate_number;
 		this.owner = owner;
 		this.numberOfSeat = numberOfSeat;
+	}
+
+	public Transportation() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public long getId() {

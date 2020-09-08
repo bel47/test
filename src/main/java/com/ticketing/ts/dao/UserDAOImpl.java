@@ -4,37 +4,36 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import com.ticketing.ts.model.Touchpoint;
-import com.ticketing.ts.model.Trip;
+import com.ticketing.ts.model.User;
 
 @Repository
-public class TouchPointDAOImpl implements TouchPointDAO {
+public class UserDAOImpl implements UserDAO {
 
 	@Autowired
 	private EntityManager entityManager;
 
 	@Override
-	public List<Touchpoint> get() {
+	public List<User> get() {
 		Session currentSession = entityManager.unwrap(Session.class);
-		Query query = currentSession.createQuery("from Touchpoint", Touchpoint.class);
-		List<Touchpoint> list = query.getResultList();
+		Query query = currentSession.createQuery("from User", User.class);
+		List<User> list = query.getResultList();
 		return list;
 	}
 
 	@Override
-	public Touchpoint get(int id) {
+	public User get(int id) {
 		Session currentSession = entityManager.unwrap(Session.class);
-		Touchpoint tpObj = currentSession.get(Touchpoint.class, id);
-		return tpObj;
+		User userObj = currentSession.get(User.class, id);
+		return userObj;
 	}
 
 	@Override
-	public void save(Touchpoint tp) {
-		tp = new Touchpoint();
+	public void save(User user) {
+
+		user = new User();
 		// passenger.setId(13123123);
 		// passenger.setAge(32);
 		// passenger.setFirst_name("Belay");
@@ -50,7 +49,9 @@ public class TouchPointDAOImpl implements TouchPointDAO {
 	@Override
 	public void delete(int id) {
 		Session currentSession = entityManager.unwrap(Session.class);
-		Touchpoint tpObj = currentSession.get(Touchpoint.class, id);
-		currentSession.delete(tpObj);
+		User usrObj = currentSession.get(User.class, id);
+		currentSession.delete(usrObj);
+
 	}
+
 }
