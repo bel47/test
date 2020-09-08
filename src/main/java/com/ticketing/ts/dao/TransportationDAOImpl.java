@@ -37,7 +37,7 @@ public class TransportationDAOImpl implements TransportationDAO {
 	@Override
 	public void save(Transportation tp) {
 
-		tp = new Transportation();
+		//tp = new Transportation();
 		// passenger.setId(13123123);
 		// passenger.setAge(32);
 		// passenger.setFirst_name("Belay");

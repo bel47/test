@@ -21,7 +21,6 @@ public class PassengerController {
 	public ModelAndView save(@ModelAttribute("pass") Passenger passObj) {
 		ModelAndView mav = new ModelAndView("passList");
 		passengerService.save(passObj);
-
 		return mav;
 	}
 
