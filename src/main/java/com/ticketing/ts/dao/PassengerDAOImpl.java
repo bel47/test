@@ -23,7 +23,7 @@ public class PassengerDAOImpl implements PassengerDAO {
 	}
 
 	@Override
-	public Passenger get(int id) {
+	public Passenger get(Long id) {
 		Session currentSession = entityManager.unwrap(Session.class);
 		Passenger passangerObj = currentSession.get(Passenger.class, id);
 		return passangerObj;
@@ -31,26 +31,15 @@ public class PassengerDAOImpl implements PassengerDAO {
 
 	@Override
 	public void save(Passenger passenger) {
-
-		passenger = new Passenger();
-		//passenger.setId(13123123);
-		passenger.setAge(32);
-		passenger.setFirst_name("Belay");
-		passenger.setMiddle_name("Retta");
-		passenger.setLast_name("Assegu");
-		passenger.setGender("Male");
-
 		Session currentSession = entityManager.unwrap(Session.class);
 		currentSession.saveOrUpdate(passenger);
-
 	}
 
 	@Override
-	public void delete(int id) {
+	public void delete(Long id) {
 		Session currentSession = entityManager.unwrap(Session.class);
 		Passenger passengerObj = currentSession.get(Passenger.class, id);
 		currentSession.delete(passengerObj);
-
 	}
 
 }

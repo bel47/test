@@ -7,8 +7,8 @@ import com.ticketing.ts.model.Passenger;
 public interface PassengerDAO {
 
 	List<Passenger> get();
-	Passenger get(int id);
+	Passenger get(Long id);
 	void save(Passenger passenger);
-	void delete(int id);
+	void delete(Long id);
 
 }

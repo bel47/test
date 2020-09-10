@@ -20,7 +20,7 @@ public class PassengerServiceImpl implements PassengerService {
 
 	@Transactional
 	@Override
-	public Passenger get(int id) {
+	public Passenger get(Long id) {
 		return passengerDAO.get(id);
 	}
 
@@ -32,7 +32,7 @@ public class PassengerServiceImpl implements PassengerService {
 
 	@Transactional
 	@Override
-	public void delete(int id) {
+	public void delete(Long id) {
 		passengerDAO.delete(id);
 	}
 
